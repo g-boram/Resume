@@ -1,0 +1,175 @@
+html {
+  font-size: 62.5%
+}
+.body {
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* list */
+.listImg {
+  height: 80px;
+  width: 80px;
+}
+.list ul li {
+  font-size: 50px;
+  text-align: center;
+  margin: 10px 30px;
+  font-family: 'Roboto', sans-serif;
+}
+
+section .box {
+  /* background-color:rgb(210, 207, 207); */
+  height: 100px;
+  margin: 10px 0;
+}
+.back-to-position {
+  opacity: 0;
+  transition: 1s;
+}
+.back-to-position.to-right {
+  transform: translateX(-150px);
+}
+.back-to-position.to-left {
+  transform: translateX(150px);
+}
+.show .back-to-position {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* main */
+.main {
+  height: 350px;
+  position: relative;
+  margin-top: 3%;
+}
+.main .row span{
+  font-family: 'Roboto', sans-serif;
+}
+.circleImg {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  z-index: 2;
+  animation: rotate_image 6s ease-in-out infinite;transform-origin: 50% 50%;
+}
+.boramImg {
+  width: 200px;
+  height: 250px;
+  margin: 30px;
+}
+
+/* main2 */
+.main2 {
+  height: 250px;
+  font-family: 'Dongle', sans-serif;
+}
+/* main3 */
+.main3 {
+  height: 700px;
+  font-family: 'Dongle', sans-serif;
+}
+.main3 .p1 {
+  font-size: 40px;
+}
+.main3 .p2 {
+  font-size: 2rem;
+}
+.main3 .p3 {
+  font-size: 2rem;
+}
+.main3Img {
+  height: 300px;
+  width: 300px;
+  float: left;
+  position: sticky;
+  top: 150px;
+  margin-left: 5%;
+  border-radius: 30%;
+  
+}
+/* card */
+.card-background {
+  height: 2000px;
+  margin-top: 200px;
+  margin-bottom: 100px;
+}
+.card-title {
+  position: sticky;
+  top: 70px;
+  text-align: center;
+  /* margin-top: 10px; */
+}
+.card-box img {
+  display: block;
+  margin: auto;
+  max-width: 80%;
+  height: auto;
+  width: 70%;
+  border-radius: 10px;
+}
+.card-box {
+  position: sticky;
+  top: 200px;
+  margin-top: 100px;
+}
+
+/* grey */
+.grey {
+  /* background-color: rgb(245, 241, 187); */
+  background: linear-gradient(to top, rgb(20, 108, 222), rgb(11, 117, 34));
+  height: 2500px;
+  margin-top: 50px;
+  border-radius: 20px;
+}
+.image {
+  float: right;
+  max-width: 100%;
+  height: auto;
+  width: 600px;
+  position: sticky;
+  top: 100px;
+  transition: 2s;
+  margin: 10px 10px;
+  
+}
+#toggleImg {
+  box-shadow: 0px 0px 20px 5px #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+}
+.text {
+  float: left;
+  width: 450px;
+  margin: 5%;
+  font-family: 'Dongle', sans-serif;
+}
+.text h1 {
+  font-size: 70px;
+  color: white;
+}
+.text h2 {
+  font-size: 40px;
+  color: rgb(226, 226, 226);
+}
+.text h4 {
+  font-size: 25px;
+}
+.text p {
+  font-size: 40px;
+  font-weight: 700;
+  background: linear-gradient(to top, #FFE400 50%, transparent 50%);
+}
+.text ul>li {
+  font-size: 30px;
+}
+
+.last {
+  height: 1000px;
+}
+@keyframes rotate_image{
+    100% {
+        transform: rotate(360deg);
+    }
+}
