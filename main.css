@@ -67,7 +67,7 @@ section .box {
 }
 /* main3 */
 .main3 {
-  height: 700px;
+  height: 650px;
   font-family: 'Dongle', sans-serif;
 }
 .main3 .p1 {
@@ -92,7 +92,7 @@ section .box {
 /* card */
 .card-background {
   height: 2000px;
-  margin-top: 200px;
+  margin-top: 300px;
   margin-bottom: 100px;
 }
 .card-title {
@@ -127,7 +127,7 @@ section .box {
   float: right;
   max-width: 100%;
   height: auto;
-  width: 600px;
+  width: 500px;
   position: sticky;
   top: 100px;
   transition: 2s;
@@ -166,7 +166,56 @@ section .box {
 }
 
 .last {
-  height: 1000px;
+  height: 750px;
+  margin-top: 20px;
+  text-align: center;
+  position: relative;
+  font-family: 'Dongle', sans-serif;
+}
+.blinking{
+  position: absolute;
+  /* align-items: center; */
+  float: right;
+  top: 150px;
+  margin-right: 50px;
+  -webkit-animation:blink 1.5s ease-in-out infinite alternate;
+  -moz-animation:blink 1.5s ease-in-out infinite alternate;
+  animation:blink 1.5s ease-in-out infinite alternate;
+}
+
+.blinking__txt{
+  position: absolute;
+  background-color: #FFE400;
+  top: 450px;
+  left: 250px;
+  float: left;
+}
+.last-r{
+  position: absolute;
+  left: 600px;
+  top: -90px;
+}
+.last-l{
+  position: absolute;
+  float: left;
+  top: 200px;
+  left: 200px;
+}
+.hideme
+{
+    opacity:0;
+}
+@-webkit-keyframes blink{
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+@-moz-keyframes blink{
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+@keyframes blink{
+  0% {opacity:0;}
+  100% {opacity:1;}
 }
 @keyframes rotate_image{
     100% {

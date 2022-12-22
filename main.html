@@ -23,10 +23,11 @@
  
   <div class="container-fluid">
     <div class="container text-center">
-    <div class="main">
+      <div class="main">
       <div class="row">
         <div class="col-8">
-          <img class="circleImg" src="./img/circle.png" alt="circle"/>
+          <img class="circleImg" src="./img/circle.png" alt="circle"
+            style="width: 400px;height: auto;margin-top: -50px; left: 180px;"/>
           <img class="boramImg" src="./img/boram.jpg" alt="boram"/>
         </div>
         <div class="col-4">
@@ -40,7 +41,7 @@
           </span>
         </div>
       </div>
-    </div>
+      </div>              
       <div class="main2">
         <div style="height: 5px; background-color: brown;"></div>
         <div class="row" style="margin-top: 20px;">
@@ -58,7 +59,7 @@
         </div>
       </div>
     
-    <div class="main3">
+      <div class="main3">
       <div style="height: 5px; background-color: brown;"></div>
       <div class="row" style="margin-top: 20px;">
         <div class="col-6 col-md-4">
@@ -104,7 +105,7 @@
     
         <section class="position4 scroll-spy">
           <div class="box box4 back-to-position to-left" 
-            style="height: 150px;border-radius: 30px; background-color: rgb(243, 216, 255);">
+            style="height: 150px;border-radius: 30px; background-color: rgb(233, 216, 255);">
             <p class="p1">4. 프로젝트</p>
             <p class="p2">(1) 스타벅스 클론 코딩</p>
             <p class="p2">(2) React 활용 기능구현 사이트</p>
@@ -113,9 +114,9 @@
         </div>
       </div> 
       <div style="height: 5px; background-color: brown;"></div>
-    </div>
+      </div>
 
-    <div class="card-background">
+      <div class="card-background">
       <span class="card-title">
         <p style="font-size: 6rem;font-family: 'Dongle', sans-serif;">My Portfolio</p>
       </span>
@@ -128,10 +129,10 @@
       <!-- <div class="card-box">
         <img src="./img/project3.jpg">
       </div> -->
-    </div>
+      </div>
 
-    <div style="height: 5px; background-color: brown;"></div>
-    <div class="grey">
+      <div style="height: 5px; background-color: brown;"></div>
+      <div class="grey">
       <div class="image">
         <img id="toggleImg" src="./img/project1.png" width="100%"/>
       </div>
@@ -200,10 +201,26 @@
           </ul>
         </div>
         </div>
-        </div>
-        <div class="last">
+      </div>
 
-        </div>
+      <div class="last">
+          <div class="last-r">
+            <span class="blinking">
+              <img src="./img/heart-2.png" alt="heart" style="height: auto;width: 300px;"/>
+            </span>
+            <img src="./img/boram.jpg" alt="boram" style="height: auto;width: 250px;position:absolute;top:310px;"/>
+          </div>
+          <div class="last-l">
+            <div>
+              <div class="hideme" style="font-size: 90px;">Thank you</div>
+              <div class="hideme" style="font-size: 65px;">감사합니다.</div>        
+          </div>
+            <p style="font-size: 30px;">더 자세한 내용을 PPT에 담아두었습니다!</p>
+            <div class="d-grid gap-2 col-6 mx-auto">
+              <button type="button" class="btn btn-warning btn-lg" onclick="closeTab()" style="font-size: 28px;">Click</button>
+            </div>
+          </div>
+      </div>
     </div>
   </div>
 
@@ -215,17 +232,70 @@
   function toggleImg2() {
     document.getElementById("toggleImg").src = "./img/project1.png";
   }
+  // const h2 = document.querySelector('.blinking__txt');
+  // const cursor = document.querySelector('.cursor');
+
+
+  //   const typing = function(_, counter = 0) {
+  //     // 출력할 내용
+  //   const txt = `Thank you.\nPleased to meet you 🖤`;
+    
+  //    setInterval(() => {
+  //     // 글자가 모두 출력되면 setInterval을 멈출 것
+  //     // if (txt.length === counter) {
+  //     //   // cursor.classList.add('blink_animate');
+  //     //   return;
+  //     // };
+  //     // 문자열 하나하나 h2의 텍스트 컨텐츠로 추가한다 
+  //       h2.textContent += txt[counter];
+  //     // 카운터 증산
+  //       counter++;
+  //     }, 80);
+  //     clearInterval(typing); 
+  //   };
+  $(document).ready(function() {
+    /* 1 */
+    $(window).scroll( function(){
+        /* 2 */
+      var h = $(window).scrollTop();
+      if(h > 6000){
+        $('.hideme').each( function(i){
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            /* 3 */
+            if( bottom_of_window > bottom_of_object/2 ){
+                $(this).animate({'opacity':'1'},1000);
+            }
+        }); 
+      }
+    });
+});
+  
+    
   $(window).scroll(function(){
     var h = $(window).scrollTop();
     console.log(h);
 
-    if(h > 5000){
+    if(h > 4500){
       toggleImg();
-    }else if(h < 5000){
+    }else if(h < 4500){
       toggleImg2();
     }
   });
- 
+  // $(window).one('scroll',function(){
+  //   var h = $(window).scrollTop();
+  //   if(h > 6500){
+  //       typing();
+  //   }else {
+  //     clearInterval(typing); 
+  //   }
+      
+  //   });
+  // $(window).scroll(function(){
+  //   var h = $(window).scrollTop();
+  //   document.getElementById("toggleImg").style.display='none';
+  // });
+    
 
   const spyEls = document.querySelectorAll("section.scroll-spy"); //요소의 부모에 달아주기
 
@@ -241,7 +311,6 @@
   });
 
   const w = window.innerWidth;
-  console.log("너비는: "+w);
   
   window.addEventListener('resize', function() {
     var width_size = window.innerWidth;
@@ -250,15 +319,13 @@
     }else{
       document.getElementById("toggleImg").style.display='block';
     }
-    console.log('Resizing...');
+    
   }, true);
-  // $(window).resize(function() { 
-  //   var width_size = window.outerWidth;
-  //   // 800 이하인지 if문으로 확인
-  //   if (width_size <= 800) {
-  //     document.getElementById("toggleImg").CSS("display", none);
-  //   }
-  // });
+
+  function closeTab(){
+    window.close();
+  }
+  
 </script>
 </body>
 </html>
